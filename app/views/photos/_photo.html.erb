@@ -5,6 +5,6 @@
     <p class="card-text"> <%= photo.caption %> </p>
   </div>
   <div class="card-footer">
-    <%= photo.created_at.strftime("%m/%d/%Y") %>
+    <%= render 'comment', photo: photo %>
   </div>
 </div>

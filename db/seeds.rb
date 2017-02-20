@@ -14,3 +14,8 @@ Photo.create(username: Faker::Name.name,
              created_at: Faker::Time.between(1.years.ago, Date.today, :all))
 
 end
+Photo.all.each do |photo|
+  rand(5).times do
+    photo.comments.create! username: Faker::Name.name, body: Faker::Lorem.sentence
+  end
+end
